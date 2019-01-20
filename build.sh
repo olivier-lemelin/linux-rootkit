@@ -6,5 +6,5 @@ SSHCONN="lemelino@$HOST"
 ssh $SSHCONN 'mkdir -p work'
 scp * $SSHCONN:work
 
-ssh $SSHCONN 'cd work; make clean; make all'
+ssh $SSHCONN 'cd work; make clean; make all; gcc -o be_root be_root.c'
 
